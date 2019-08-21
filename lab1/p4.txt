@@ -1,0 +1,13 @@
+#include<stdio.h>
+
+ main()
+{
+	  i;
+	
+	 a;
+	 k;
+	
+	 c;
+
+	return 0;
+}
