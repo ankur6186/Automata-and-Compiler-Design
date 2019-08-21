@@ -1,0 +1,12 @@
+#include<stdio.h>
+
+int main()
+{
+	int i=0;
+	readf("%d",&i);
+	readf("%d",&i);
+	readf("%d",&i);
+	writef("%d"i);
+
+	return 0;
+}

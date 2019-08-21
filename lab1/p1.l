@@ -1,6 +1,8 @@
 %{ 
 	#include<stdio.h>
+	#include<string.h>
 	int count=0,max=0;
+	string S;
 %} 
 
 %% 

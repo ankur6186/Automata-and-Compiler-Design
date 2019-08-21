@@ -6,7 +6,7 @@ int main()
 	scanf("%d",&i);
 	scanf("%d",&i);
 	scanf("%d",&i);
-	printf("%id"i);
+	printf("%d"i);
 
 	return 0;
 }
