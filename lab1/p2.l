@@ -4,11 +4,14 @@
 %}
 
 %%
-"scanf" {fprintf(yyout,"readf"); count1++;}
-"printf" {fprintf(yyout,"writef");count2++;}
-. {fprintf(yyout,"%s",yytext);}
-"\n" {fprintf(yyout,"\n");}
-<<EOF>> {printf("Number of scanf:%d and printf:%d\n",count1,count2);yyterminate();}
+"scanf"		{fprintf(yyout,"readf"); 
+			count1++;}
+"printf" 	{fprintf(yyout,"writef");
+			count2++;}
+.			{fprintf(yyout,"%s",yytext);}
+"\n"		{fprintf(yyout,"\n");}
+<<EOF>>		{printf("Number of scanf:%d and printf:%d\n",count1,count2);
+			yyterminate();}
 %%
 
 int yywrap(void){}

@@ -2,11 +2,13 @@
 
 int main()
 {
-	long int i;
+	long int i,j;
 	// ankur is king
+	/* ankur is
+	 hero */
 	double a;
-	float k;
-	// gaurav is maadarchod
+	float k,l,l,l;
+	// gaurav is cryewcwe
 	char c;
 
 	return 0;

@@ -1,13 +1,14 @@
 #include<stdio.h>
 
- main()
+int main()
 {
-	  i;
+	long int i,j;
 	
-	 a;
-	 k;
 	
-	 c;
+	double a;
+	float k,l,l,l;
+	
+	char c;
 
 	return 0;
 }

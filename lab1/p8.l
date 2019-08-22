@@ -4,11 +4,11 @@
 %}
 
 %%
-[a-zA-Z0-9]*[a][b][ \n\t] {count++;}
-[ \n\t] {;}
-. {;}
-[a-zA-Z0-9]*[a][b][<<EOF>>] {count++;printf("Number of words ending with ab:%d\n",count); yyterminate();}
-<<EOF>> {count++;printf("Number of words ending with ab:%d\n",count); yyterminate();}
+[a-zA-Z0-9]*[a][b][ \n\t]	{count++;}
+[ \n\t]						{;}
+.							{;}
+[a-zA-Z0-9]*[a][b][<<EOF>>]	{count++;printf("Number of words ending with ab:%d\n",count); yyterminate();}
+<<EOF>>						{count++;printf("Number of words ending with ab:%d\n",count); yyterminate();}
 %%
 
 int yywrap(void){}
