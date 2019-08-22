@@ -4,16 +4,15 @@
 %}
 
 %%
-[/][/][ a-zA-Z0-9]* {count++;}
-"float" {count1++;}
-"char" {count1++;}
-"int" {count1++;}
-"double" {count1++;}
-"long" {;}
-"unsigned" {;}
+[/][/].* {count++;}
+[/][\*][a-zA-Z\n \t0-9]*[\*][/] {count++;}
+"float".* {count1++; for(int i=0;i<yyleng;i++) if(yytext[i]==',') count1++; fprintf(yyout,"%s",yytext);}
+"char".*  {count1++; for(int i=0;i<yyleng;i++) if(yytext[i]==',') count1++; fprintf(yyout,"%s",yytext);}
+"int".* {count1++; for(int i=0;i<yyleng;i++) if(yytext[i]==',') count1++; fprintf(yyout,"%s",yytext);}
+"double".* {count1++; for(int i=0;i<yyleng;i++) if(yytext[i]==',') count1++; fprintf(yyout,"%s",yytext);}
 . {fprintf(yyout,"%s",yytext);}
 "\n" {fprintf(yyout,"\n");}
-<<EOF>> {printf("No. of comment lines:%d and identifiers:%d\n",count,count1);yyterminate();}
+<<EOF>> {printf("No. of comment lines:%d and identifiers:%d\n",count,count1-1);yyterminate();}
 %%
 
 int yywrap(){}
