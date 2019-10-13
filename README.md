@@ -1,1 +1,1 @@
-# Automata-and-compiler-design
+# Automata-and-compiler-designs
